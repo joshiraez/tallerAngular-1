@@ -46,5 +46,7 @@ public interface ClinicService {
     void saveOwner(Owner owner);
 
     Collection<Owner> findAll();
+    
+    void deleteOwner(int id);
 
 }

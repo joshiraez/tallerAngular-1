@@ -99,6 +99,12 @@ public class ClinicServiceImpl implements ClinicService {
     public Collection<Vet> findVets() throws DataAccessException {
         return vetRepository.findAll();
     }
+    
+    @Override
+    @Transactional
+    public void deleteOwner(int id) throws DataAccessException {
+    	ownerRepository.delete(id);
+    }
 
 
 }
